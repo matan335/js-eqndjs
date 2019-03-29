@@ -1,0 +1,106 @@
+.arena {
+  margin-top: 10px;
+  width:90vw;
+  height :60vh;
+  margin:0 auto;
+  background-color: black;
+}
+
+.arena tr td {
+  background-color: white;
+  width:30px;
+  height:30px;
+}
+
+.controls-container {
+  margin: 8px auto;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border:2px solid black
+}
+
+.up-btn {
+  position: absolute;
+  top:0;
+  width: 70%;
+  left : 10%
+}
+
+.down-btn {
+  position: absolute;
+  bottom:0;
+  width:70%;
+  left : 10%
+}
+
+.left-btn {
+  position: absolute;
+  left: 0;
+  top:15%;
+  height: 60%;
+  width :20%;
+
+  border:1px solid
+}
+
+.hiden {
+  display:none;
+}
+
+.user-info {
+  width:100vw;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+td {
+  margin: 0;
+}
+
+td div {
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0
+}
+
+.snake {
+  width: 100%;
+  height: 100%;
+}
+
+.slut {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+
+
+.red {
+   -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+.blue {
+      -webkit-filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+      filter: grayscale(100%) brightness(30%) sepia(100%) hue-rotate(-180deg) saturate(700%) contrast(0.8);
+}
+.green {
+      -webkit-filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.8);
+      filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.8);
+}
+.yellow {
+      -webkit-filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
+      filter: grayscale(100%) brightness(120%) sepia(90%) hue-rotate(5deg) saturate(500%) contrast(0.7);
+}
+.grey {
+      -webkit-filter: grayscale(100%) brightness(110%) contrast(0.9);
+      filter: grayscale(100%) brightness(110%) contrast(0.9);
+}
+.black {
+      -webkit-filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+      filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}

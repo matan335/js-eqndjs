@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "eruda": "^1.5.4",
+    "nipplejs": "^0.8.1"
+  }
+}
