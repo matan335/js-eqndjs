@@ -52,6 +52,10 @@ const getSlutStyle = value => {
       return `<img src="${getSnakeSprite()}" class="slut ${color}"
       style=""/>
       `
+      case 2.2:
+
+      return `<div class="snake" style="background-color:${'black'};"
+      ></div>`
   }
 }
 
@@ -81,10 +85,21 @@ const getApple = () => {
 }
 
 const getSnake = () => {
-  player.snake.location.forEach(
-    (snakeSlut, i) => arena[snakeSlut[0]][snakeSlut[1]] = i === 0 ?
-      2.5
-      : 2)
+  const location = player.getSnake()
+  location.forEach((snakeSlut, i) => {
+    let value 
+    switch(i) {
+      case 0:
+        value = 2.5
+        break
+      case location.length-1:
+        value = 2.2
+        break
+      default:
+      value = 2
+    }
+    arena[snakeSlut[0]][snakeSlut[1]] = value
+  })
 }
 
 const startArena = () => {

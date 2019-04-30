@@ -20,7 +20,7 @@ const getSnakeColor = () => {
 const snake = {
   color: getSnakeColor(),
   direction: 'up',
-  location: [[4, 4]],
+  location: [[4,4],[4,5]],
   sprites: {
     back: 
     'https://i.ibb.co/GtSr9Sn/oie-transparent-1.png',
@@ -46,12 +46,15 @@ const handleColision = type => {
 }
 
 const isValidSlut = slut => {
+  const [x,y] = slut
   const size = Arena.size
+  const arena = Arena.getArena()
   if (
     slut[0] === size[0] ||
     slut[1] === size[1] ||
     slut[0] < 0 ||
-    slut[1] < 0
+    slut[1] < 0 ||
+    arena[x][y] === 2
   ) {
     handleColision('wall')
     return false
@@ -107,13 +110,17 @@ const move = () => {
   }
   const location = snake.location[0]
   if (arena[location[0]][location[1]] === 1) {
+    snake.location.push(lastLocation)
+    Arena.render()
     Arena.getApple()
     Score.add()
-    snake.location.push(lastLocation)
   }
 }
 
+const getSnake = () => snake.location
+
 export default {
   snake,
-  move
+  move,
+  getSnake
 }
