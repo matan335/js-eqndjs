@@ -62,16 +62,27 @@ const getSlutStyle = value => {
     case 1:
   return '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQe5t1DIEGJsjRAueaZpfnseA_oQ9ZrMW3k7Ia9dnbVoCvT_pO4" class="slut apple"/>'
     case 2:
-      return `<div class="snake" style="background-color:${color};"
-      ></div>`
+      return `<img src="https://i.ibb.co/zRjB9hD/images-2.jpg" class="slut ${color}"
+      style=""/>
+      `
+
+      // return `<div class="snake" 
+      // style="background-color:${color};"
+      // ></div>`
     case 2.5:
       return `<img src="${getSnakeSprite()}" class="slut ${color}"
       style=""/>
       `
       case 2.2:
 
-      return `<div class="${getTailDir()} tail" style="background-color:${'black'};"
-      ></div>`
+      return `<div class="${getTailDir()} tail"
+
+
+      >
+      <img src="https://i.ibb.co/zRjB9hD/images-2.jpg" class="slut ${color}"
+      style="object-fit:cover;max-width:30px;"/>
+      
+      </div>`
   }
 }
 
