@@ -114,8 +114,6 @@ const getApple = () => {
 const getSnake = () => {
   const location = player.getSnake()
   for (let i = location.length-1; i>-1; i--){
-    console.log('hhhgf',i)
-
     let value 
     const snakeSlut = location[i]
     switch(i) {
@@ -129,27 +127,7 @@ const getSnake = () => {
       value = 2
     }
     arena[snakeSlut[0]][snakeSlut[1]] = value
-
-    
   }
-}
-
-const getSnake2222 = () => {
-  const location = player.getSnake()
-  location.forEach((snakeSlut, i) => {
-    let value 
-    switch(i) {
-      case 0:
-        value = 2.5
-        break
-      case location.length-1:
-        value = 2.2
-        break
-      default:
-      value = 2
-    }
-    arena[snakeSlut[0]][snakeSlut[1]] = value
-  })
 }
 
 
