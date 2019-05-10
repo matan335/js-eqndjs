@@ -38,6 +38,22 @@ const getSnakeSprite = () => {
   }
 }
 
+const getTailDir = () => {
+  const snakelocation = player.getSnake()
+  const tail = snakelocation[snakelocation.length-1]
+  const preTail = snakelocation[snakelocation.length-2]
+
+  if(tail[0] === preTail[0] && preTail[1]-1 === tail[1]) return 'tail-down'
+
+  else if(tail[0] === preTail[0] && preTail[1] +1 === tail[1]) return 'tail-up'
+
+  else if(tail[1] === preTail[1] && preTail[0] -1 === tail[0]) return 'tail-right'
+
+  else if(tail[1] === preTail[1] && preTail[0] +1 === tail[0]) return 'tail-left'
+
+  return ''
+}
+
 const getSlutStyle = value => {
   const color = player.snake.color
   switch (value) {
@@ -54,7 +70,7 @@ const getSlutStyle = value => {
       `
       case 2.2:
 
-      return `<div class="snake" style="background-color:${'black'};"
+      return `<div class="${getTailDir()} tail" style="background-color:${'black'};"
       ></div>`
   }
 }
@@ -86,6 +102,29 @@ const getApple = () => {
 
 const getSnake = () => {
   const location = player.getSnake()
+  for (let i = location.length-1; i>-1; i--){
+    console.log('hhhgf',i)
+
+    let value 
+    const snakeSlut = location[i]
+    switch(i) {
+      case 0:
+        value = 2.5
+        break
+      case location.length-1:
+        value = 2.2
+        break
+      default:
+      value = 2
+    }
+    arena[snakeSlut[0]][snakeSlut[1]] = value
+
+    
+  }
+}
+
+const getSnake2222 = () => {
+  const location = player.getSnake()
   location.forEach((snakeSlut, i) => {
     let value 
     switch(i) {
@@ -101,6 +140,7 @@ const getSnake = () => {
     arena[snakeSlut[0]][snakeSlut[1]] = value
   })
 }
+
 
 const startArena = () => {
   getApple()

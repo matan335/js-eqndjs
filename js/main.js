@@ -101,7 +101,6 @@ manager.on('move', (_, props) => {
     (currDir === 'up' && dir === 'down')
   ) return
 
-  console.log('chaned to',dir)
   Player.snake.direction = dir
   Arena.render()
 })

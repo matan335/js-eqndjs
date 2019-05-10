@@ -6,6 +6,29 @@
   border:1px solid black
 }
 
+
+
+.tail {
+  -webkit-clip-path: polygon(47% 13%, 59% 13%, 68% 41%, 70% 74%, 71% 100%, 35% 100%, 35% 71%, 38% 40%);
+clip-path: polygon(47% 13%, 59% 13%, 68% 41%, 70% 74%, 71% 100%, 35% 100%, 35% 71%, 38% 40%);
+}
+
+.tail-up {
+  transform: rotate(180deg);
+}
+
+.tail-left {
+  transform: rotate(90deg);
+}
+
+.tail-right {
+  transform: rotate(270deg);
+}
+
+.tail-down {
+  transform: rotate(0deg)
+}
+
 .arena tr td {
   background-color: white;
   width:30px;
